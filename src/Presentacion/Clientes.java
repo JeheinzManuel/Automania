@@ -42,9 +42,7 @@ public class Clientes extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
@@ -98,17 +96,11 @@ public class Clientes extends javax.swing.JFrame {
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 114, 115, -1));
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 152, 115, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/nuevo.jpg"))); // NOI18N
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 70, 70));
-
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registrar.png"))); // NOI18N
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 70, -1));
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 70, 70));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.jpg"))); // NOI18N
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 70, 70));
@@ -189,8 +181,6 @@ public class Clientes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
