@@ -10,8 +10,8 @@ public class Inicio extends javax.swing.JFrame {
 
     private Timer tiempo;
     int contador;
-    public final static int TWO_SECOND=5;
-    
+    public final static int TWO_SECOND = 5;
+
     public Inicio() {
         initComponents();
         setLocationRelativeTo(null);
@@ -76,7 +76,7 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraActionPerformed
@@ -84,43 +84,50 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_txtContraActionPerformed
 
     private void txtContraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraKeyPressed
-       if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-       inicioSecion();
-       }
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            inicioSecion();
+        }
     }//GEN-LAST:event_txtContraKeyPressed
-    class TimerListener implements ActionListener{
+    class TimerListener implements ActionListener {
+
         @Override
-        public void actionPerformed(ActionEvent e){
+        public void actionPerformed(ActionEvent e) {
             contador++;
             Progres.setValue(contador);
-            if(contador==100){
+            if (contador == 100) {
                 tiempo.stop();
                 desactivar();
-     JOptionPane.showMessageDialog(null, "Bienvenido\n" + "Has ingresado satisfactoriamente al sistema","Mensaje de bienvenida",JOptionPane.INFORMATION_MESSAGE);
-     Menu menPrincipal = new Menu();
-     menPrincipal.setVisible(true);
+                JOptionPane.showMessageDialog(null, "Bienvenido\n" + "Has ingresado satisfactoriamente al sistema", "Mensaje de bienvenida", JOptionPane.INFORMATION_MESSAGE);
+                Menu menPrincipal = new Menu();
+                menPrincipal.setVisible(true);
                 setVisible(false);
             }
         }
     }
-    
-    public void desactivar(){this.setVisible(false);}
-    public void activar(){tiempo.start();}
-    
-    public void inicioSecion(){
-        String Usuario = txtUsuario.getText();
-        String contra=String.valueOf(txtContra.getPassword());
-     if (txtUsuario.getText().equals("grupo2") && contra.compareTo("12345")==0){
-         Progres.setVisible(true);
-         contador= -1;
-         Progres.setValue(contador);
-         Progres.setStringPainted(true);
-         tiempo= new Timer(TWO_SECOND,new TimerListener());
-         activar();
-     }else {
-     JOptionPane.showMessageDialog(null, "Acceso denegado:\n" + "Por favor ingrese un usuario y una contraseña vàlida", "Acceso denegado",JOptionPane.ERROR_MESSAGE);
-     }
+
+    public void desactivar() {
+        this.setVisible(false);
     }
+
+    public void activar() {
+        tiempo.start();
+    }
+
+    public void inicioSecion() {
+        String Usuario = txtUsuario.getText();
+        String contra = String.valueOf(txtContra.getPassword());
+        if (txtUsuario.getText().equals("grupo2") && contra.compareTo("12345") == 0) {
+            Progres.setVisible(true);
+            contador = -1;
+            Progres.setValue(contador);
+            Progres.setStringPainted(true);
+            tiempo = new Timer(TWO_SECOND, new TimerListener());
+            activar();
+        } else {
+            JOptionPane.showMessageDialog(null, "Acceso denegado:\n" + "Por favor ingrese un usuario y una contraseña vàlida", "Acceso denegado", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
